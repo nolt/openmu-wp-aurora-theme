@@ -1,0 +1,19 @@
+/*
+Theme Name: OpenMU Aurora
+Author: Nolt
+Description: A modern block theme for OpenMU (MU Online server emulator) websites. Night-sky art direction with painted parallax scenery, animated northern lights, frosted-glass panels and thin silver lines. Ships styles for every OpenMU WP Connect block (ranking, armory, events, mini games, account, server status) and sets the site up (pages, menu, front page) on activation.
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 8.1
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: openmu-aurora
+Domain Path: /languages
+Tags: block-patterns, full-site-editing, dark, custom-colors, custom-logo, editor-style, featured-images, wide-blocks, translation-ready, blog, entertainment
+
+Copyright (C) Nolt. This theme is licensed under the GPL-2.0-or-later.
+
+All visual styling lives in assets/css/ (loaded by inc/setup.php); this file only carries
+the header WordPress reads. Design tokens are in theme.json.
+*/

@@ -1,0 +1,32 @@
+<!-- OpenMU Aurora emblem: a faceted aurora crystal framed by a pair of mirrored wings.
+     Hand-written for this theme, GPL-2.0-or-later, (c) Nolt. Uses its own gradient ids (oa-*)
+     so it can be inlined next to other SVGs without clashes. Readable from 32 to 256 px. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="OpenMU Aurora">
+  <defs>
+    <!-- Aurora gradient: teal -> violet -> rose, used for the crystal body. -->
+    <linearGradient id="oa-crystal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ee6c1"/>
+      <stop offset="0.55" stop-color="#8a6cff"/>
+      <stop offset="1" stop-color="#ff6fae"/>
+    </linearGradient>
+    <!-- Silver gradient for the wings. -->
+    <linearGradient id="oa-silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#9fb2dd"/>
+    </linearGradient>
+  </defs>
+  <!-- Left wing: three feather blades; the right wing is the exact mirror (translate + scale(-1,1)). -->
+  <g id="oa-wing" fill="url(#oa-silver)">
+    <path d="M112 148 C 84 140 48 118 18 70 C 52 82 84 92 108 112 Z"/>
+    <path d="M110 166 C 82 164 50 152 26 122 C 56 126 84 132 106 142 Z" opacity="0.85"/>
+    <path d="M110 184 C 88 186 64 182 46 166 C 68 166 90 164 106 160 Z" opacity="0.7"/>
+  </g>
+  <use href="#oa-wing" transform="translate(256 0) scale(-1 1)"/>
+  <!-- Crystal: outer silhouette, then facets drawn as lighter/darker overlays. -->
+  <path d="M128 28 L166 96 L128 228 L90 96 Z" fill="url(#oa-crystal)"/>
+  <path d="M128 28 L166 96 L128 96 Z" fill="#ffffff" opacity="0.35"/>
+  <path d="M128 28 L90 96 L128 96 Z" fill="#ffffff" opacity="0.12"/>
+  <path d="M90 96 L128 96 L128 228 Z" fill="#060a14" opacity="0.18"/>
+  <path d="M128 28 L166 96 L128 228 L90 96 Z" fill="none" stroke="#dfe8ff" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M90 96 H166" stroke="#dfe8ff" stroke-width="2" opacity="0.7"/>
+</svg>

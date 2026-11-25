@@ -1,0 +1,1080 @@
+# Copyright (C) 2026 Nolt
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenMU Aurora 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/openmu-aurora\n"
+"Last-Translator: Nolt\n"
+"Language-Team: Polish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-24T08:52:55+00:00\n"
+"PO-Revision-Date: 2026-11-24 10:00+0100\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: openmu-aurora\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. Theme Name of the theme
+#: style.css
+#: inc/setup.php:131
+msgid "OpenMU Aurora"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A modern block theme for OpenMU (MU Online server emulator) websites. Night-sky art direction with painted parallax scenery, animated northern lights, frosted-glass panels and thin silver lines. Ships styles for every OpenMU WP Connect block (ranking, armory, events, mini games, account, server status) and sets the site up (pages, menu, front page) on activation."
+msgstr "Nowoczesny motyw blokowy dla stron OpenMU (emulator serwera MU Online). Nocne niebo, malowany krajobraz z paralaksą, animowana zorza polarna, szklane panele i cienkie srebrne linie. Zawiera style wszystkich bloków OpenMU WP Connect (ranking, zbrojownia, wydarzenia, minigry, konto, status serwera) i po aktywacji sam przygotowuje stronę (podstrony, menu, stronę główną)."
+
+#. Author of the theme
+#: style.css
+msgid "Nolt"
+msgstr ""
+
+#: blocks/site-nav/render.php:19
+msgid "Main menu"
+msgstr "Menu główne"
+
+#: blocks/site-nav/render.php:50
+#: blocks/site-nav/render.php:57
+#: patterns/hero.php:32
+msgid "Play now"
+msgstr "Graj teraz"
+
+#: blocks/site-nav/render.php:60
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/nav.php:59
+#: inc/site-setup.php:46
+#: patterns/footer.php:26
+msgid "Ranking"
+msgstr "Ranking"
+
+#: inc/nav.php:60
+#: inc/site-setup.php:47
+#: patterns/footer.php:27
+msgid "Mini games"
+msgstr "Mini gry"
+
+#: inc/nav.php:61
+#: inc/site-setup.php:48
+#: patterns/footer.php:28
+msgid "Armory"
+msgstr "Zbrojownia"
+
+#: inc/nav.php:62
+#: inc/site-setup.php:49
+#: patterns/footer.php:29
+msgid "Events"
+msgstr "Wydarzenia"
+
+#: inc/nav.php:63
+#: inc/site-setup.php:50
+#: patterns/footer.php:30
+#: patterns/how-to-start.php:17
+msgid "Commands"
+msgstr "Komendy"
+
+#: inc/nav.php:67
+#: inc/site-setup.php:43
+#: patterns/footer.php:20
+msgid "Home"
+msgstr "Strona główna"
+
+#: inc/nav.php:68
+#: inc/site-setup.php:44
+#: patterns/footer.php:21
+#: patterns/news-archive.php:13
+msgid "News"
+msgstr "Aktualności"
+
+#: inc/nav.php:69
+#: inc/site-setup.php:45
+#: patterns/footer.php:22
+#: patterns/how-to-start.php:16
+msgid "Download"
+msgstr "Pobierz"
+
+#: inc/nav.php:72
+#: patterns/footer.php:25
+#: patterns/page-armory.php:15
+#: patterns/page-commands.php:41
+#: patterns/page-events.php:15
+#: patterns/page-mini-games.php:15
+msgid "Server"
+msgstr "Serwer"
+
+#: inc/nav.php:77
+#: inc/site-setup.php:51
+#: patterns/footer.php:23
+msgid "Account"
+msgstr "Konto"
+
+#: inc/setup.php:135
+msgid "OpenMU Aurora pages"
+msgstr "Podstrony OpenMU Aurora"
+
+#: inc/setup.php:150
+msgid "Glass panel"
+msgstr "Szklany panel"
+
+#: inc/setup.php:157
+msgid "Glass outline"
+msgstr "Szklany kontur"
+
+#: inc/setup.php:164
+msgid "Framed"
+msgstr "W ramce"
+
+#. translators: 1: page title, 2: date.
+#: inc/site-setup.php:198
+#, php-format
+msgid "%1$s (backup %2$s)"
+msgstr "%1$s (kopia %2$s)"
+
+#: patterns/class-showcase.php
+msgctxt "Pattern title"
+msgid "Class showcase"
+msgstr "Prezentacja klas"
+
+#: patterns/class-showcase.php
+msgctxt "Pattern description"
+msgid "Interactive showcase of the seven classes with painted portraits, role meters and signature skills. The selector works with mouse, touch, swipe and keyboard."
+msgstr "Interaktywna prezentacja siedmiu klas z malowanymi portretami, miernikami roli i charakterystycznymi umiejętnościami. Selektor działa myszą, dotykiem, przesunięciem i klawiaturą."
+
+#: patterns/class-showcase.php:20
+msgid "Frontline guardian"
+msgstr "Strażnik pierwszej linii"
+
+#: patterns/class-showcase.php:21
+msgid "Heavy armour, two-handed steel and the stamina to hold any line. The Dark Knight stands first in every fight and leads every charge."
+msgstr "Ciężka zbroja, dwuręczna stal i wytrzymałość, by utrzymać każdą linię. Dark Knight staje pierwszy w każdej walce i prowadzi każdą szarżę."
+
+#: patterns/class-showcase.php:27
+msgid "Arcane artillery"
+msgstr "Magiczna artyleria"
+
+#: patterns/class-showcase.php:28
+msgid "Fire, ice and storm on command. Area spells melt whole crowds, at the price of thin armour and careful positioning."
+msgstr "Ogień, lód i burza na rozkaz. Czary obszarowe topią całe tłumy, za cenę cienkiej zbroi i ostrożnego ustawiania się."
+
+#: patterns/class-showcase.php:34
+msgid "Marksman and healer"
+msgstr "Strzelec i uzdrowiciel"
+
+#: patterns/class-showcase.php:35
+msgid "Swift arrows from a distance and blessings for the whole group. A good elf keeps friends alive and enemies out of reach."
+msgstr "Szybkie strzały z dystansu i błogosławieństwa dla całej grupy. Dobry elf utrzymuje przyjaciół przy życiu, a wrogów z dala."
+
+#: patterns/class-showcase.php
+msgid "Commander"
+msgstr "Dowódca"
+
+#: patterns/class-showcase.php
+msgid "Strength, command and a loyal Dark Raven at his side. Earth-splitting blows and bursts of fire, and a battle cry that sharpens the whole party."
+msgstr "Siła, dowodzenie i wierny Dark Raven u boku. Ciosy rozłupujące ziemię, wybuchy ognia i okrzyk bojowy, który wyostrza zmysły całej grupy."
+
+#: patterns/class-showcase.php
+msgid "Spellblade"
+msgstr "Mistrz miecza i magii"
+
+#: patterns/class-showcase.php
+msgid "Sword and spell in a single hand. The Magic Gladiator cuts through the front line with blades of fire and answers a crowd with a storm."
+msgstr "Miecz i czar w jednej dłoni. Magic Gladiator przebija się przez pierwszą linię ognistym ostrzem, a na tłum odpowiada burzą."
+
+#: patterns/class-showcase.php
+msgid "Curses and spirits"
+msgstr "Klątwy i duchy"
+
+#: patterns/class-showcase.php
+msgid "Lightning, curses and stolen life. The Summoner weakens and puts enemies to sleep while the book does the killing from a safe distance."
+msgstr "Błyskawice, klątwy i skradzione życie. Summoner osłabia wrogów i usypia ich, a księga zabija z bezpiecznej odległości."
+
+#: patterns/class-showcase.php
+msgid "Unarmed brawler"
+msgstr "Wojownik walczący wręcz"
+
+#: patterns/class-showcase.php
+msgid "No weapon but gauntlets and fury. Fast combo strikes and a roar that shakes the ground make the Rage Fighter a master of close combat."
+msgstr "Żadnej broni poza rękawicami i furią. Szybkie kombinacje ciosów i ryk wstrząsający ziemią czynią z Rage Fightera mistrza walki wręcz."
+
+#: patterns/class-showcase.php:41
+msgid "Offense"
+msgstr "Atak"
+
+#: patterns/class-showcase.php:42
+msgid "Defense"
+msgstr "Obrona"
+
+#: patterns/class-showcase.php:43
+msgid "Reach"
+msgstr "Zasięg"
+
+#: patterns/class-showcase.php:44
+msgid "Support"
+msgstr "Wsparcie"
+
+#: patterns/class-showcase.php:52
+msgid "Choose your path"
+msgstr "Wybierz swoją ścieżkę"
+
+#: patterns/class-showcase.php:56
+msgid "Seven heroes, one continent"
+msgstr "Siedmiu bohaterów, jeden kontynent"
+
+#: patterns/class-showcase.php:60
+msgid "Every class plays differently. Pick the one that fits you; you can always start another."
+msgstr "Każda klasa gra inaczej. Wybierz tę, która do Ciebie pasuje; zawsze możesz zacząć inną."
+
+#: patterns/class-showcase.php:81
+msgid "Classes"
+msgstr "Klasy"
+
+#. translators: 1: rating 1-5.
+#: patterns/class-showcase.php:100
+#, php-format
+msgid "%d out of 5"
+msgstr "%d na 5"
+
+#: patterns/class-showcase.php:108
+msgid "Signature skills"
+msgstr "Charakterystyczne umiejętności"
+
+#: patterns/class-showcase.php:117
+msgid "Start your journey"
+msgstr "Zacznij swoją podróż"
+
+#: patterns/community-cta.php
+msgctxt "Pattern title"
+msgid "Community call to action"
+msgstr "Zaproszenie do społeczności"
+
+#: patterns/community-cta.php
+msgctxt "Pattern description"
+msgid "A wide painted banner inviting visitors to join the community, with two buttons."
+msgstr "Szeroki malowany baner zapraszający do społeczności, z dwoma przyciskami."
+
+#: patterns/community-cta.php:20
+msgid "Join us"
+msgstr "Dołącz do nas"
+
+#: patterns/community-cta.php:24
+msgid "Your party is waiting"
+msgstr "Twoja grupa już czeka"
+
+#: patterns/community-cta.php:28
+msgid "Make an account, find a group and see how far the northern lights will carry you. New players are always welcome."
+msgstr "Załóż konto, znajdź grupę i zobacz, dokąd zaniesie Cię zorza polarna. Nowi gracze są zawsze mile widziani."
+
+#: patterns/community-cta.php:33
+#: patterns/hero.php:36
+#: patterns/how-to-start.php:15
+#: patterns/page-download.php:43
+msgid "Create an account"
+msgstr "Załóż konto"
+
+#: patterns/community-cta.php:37
+#: patterns/not-found.php:35
+msgid "Read the news"
+msgstr "Czytaj aktualności"
+
+#: patterns/events-teaser.php
+msgctxt "Pattern title"
+msgid "Events teaser"
+msgstr "Zapowiedź wydarzeń"
+
+#: patterns/events-teaser.php
+msgctxt "Pattern description"
+msgid "Short text next to the next few game events from the server schedule, with a link to the full list."
+msgstr "Krótki tekst obok najbliższych wydarzeń z harmonogramu serwera, z linkiem do pełnej listy."
+
+#: patterns/events-teaser.php:21
+msgid "On the clock"
+msgstr "Na zegarze"
+
+#: patterns/events-teaser.php:25
+msgid "Never miss an event"
+msgstr "Nie przegap żadnego wydarzenia"
+
+#: patterns/events-teaser.php:29
+msgid "Blood Castle, Devil Square, Chaos Castle and the invasions start on a fixed schedule. Here are the next ones, in the site's time zone."
+msgstr "Blood Castle, Devil Square, Chaos Castle i inwazje startują według stałego harmonogramu. Oto najbliższe, w strefie czasowej strony."
+
+#: patterns/events-teaser.php:34
+msgid "Full schedule"
+msgstr "Pełny harmonogram"
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Aurora footer"
+msgstr "Stopka Aurora"
+
+#: patterns/footer.php
+msgctxt "Pattern description"
+msgid "Rich footer: brand and server status, two link columns (explore, server) and a legal line. Used by the footer template part."
+msgstr "Rozbudowana stopka: marka i status serwera, dwie kolumny linków (odkrywaj, serwer) i linia prawna. Używana przez część szablonu stopki."
+
+#: patterns/footer.php:19
+msgid "Explore"
+msgstr "Odkrywaj"
+
+#: patterns/footer.php:49
+msgid "A Season 6 MU Online server. Create a hero, join the events and climb the ranking."
+msgstr "Serwer MU Online Season 6. Stwórz bohatera, dołącz do wydarzeń i wspinaj się w rankingu."
+
+#. translators: 1: year, 2: site name.
+#: patterns/footer.php:90
+#, php-format
+msgid "© %1$s %2$s. Fan-run server; MU Online and related names belong to their respective owners."
+msgstr "© %1$s %2$s. Serwer prowadzony przez fanów; MU Online i powiązane nazwy należą do ich właścicieli."
+
+#: patterns/footer.php:96
+msgid "Theme: OpenMU Aurora"
+msgstr "Motyw: OpenMU Aurora"
+
+#: patterns/footer.php:96
+msgid "Back to top"
+msgstr "Do góry"
+
+#: patterns/header.php
+msgctxt "Pattern title"
+msgid "Aurora header"
+msgstr "Nagłówek Aurora"
+
+#: patterns/header.php
+msgctxt "Pattern description"
+msgid "Brand (emblem and site title), the fixed main menu with the Server submenu and the Play now button. Used by the header template part."
+msgstr "Marka (godło i tytuł strony), stałe menu główne z podmenu Serwer i przycisk Graj teraz. Używany przez część szablonu nagłówka."
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "Aurora hero"
+msgstr "Hero Aurora"
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "Full-screen opening of the front page over the painted, animated scene: headline, buttons and the live server status."
+msgstr "Pełnoekranowe otwarcie strony głównej na malowanej, animowanej scenie: nagłówek, przyciski i status serwera na żywo."
+
+#: patterns/hero.php:19
+msgid "Season 6 · MU Online server"
+msgstr "Serwer MU Online Season 6"
+
+#: patterns/hero.php:23
+msgid "Forge your legend beneath the"
+msgstr "Wykuj swoją legendę pod"
+
+#: patterns/hero.php:23
+msgid "northern lights"
+msgstr "zorzą polarną"
+
+#: patterns/hero.php:27
+msgid "Choose a class, join the events and climb the ranking. Knights, wizards and elves of the ancient continent are waiting for you."
+msgstr "Wybierz klasę, dołącz do wydarzeń i wspinaj się w rankingu. Rycerze, czarodzieje i elfy dawnego kontynentu czekają na Ciebie."
+
+#: patterns/hero.php:49
+msgid "Scroll to the classes"
+msgstr "Przewiń do klas"
+
+#: patterns/how-to-start.php
+msgctxt "Pattern title"
+msgid "How to start"
+msgstr "Jak zacząć"
+
+#: patterns/how-to-start.php
+msgctxt "Pattern description"
+msgid "Four numbered steps from account to first event, each with an icon and a link."
+msgstr "Cztery ponumerowane kroki od konta do pierwszego wydarzenia, każdy z ikoną i linkiem."
+
+#: patterns/how-to-start.php:15
+msgid "Pick a login and a password. The same account works in the game and on this site."
+msgstr "Wybierz login i hasło. To samo konto działa w grze i na tej stronie."
+
+#: patterns/how-to-start.php:15
+msgid "Register"
+msgstr "Zarejestruj się"
+
+#: patterns/how-to-start.php:16
+msgid "Download the client"
+msgstr "Pobierz klienta"
+
+#: patterns/how-to-start.php:16
+msgid "Get the game from the download page and connect to the server."
+msgstr "Pobierz grę ze strony pobierania i połącz się z serwerem."
+
+#: patterns/how-to-start.php:17
+msgid "Create a hero"
+msgstr "Stwórz bohatera"
+
+#: patterns/how-to-start.php:17
+msgid "Log in, choose a class and step onto the first map. Type /list in the chat to see the commands."
+msgstr "Zaloguj się, wybierz klasę i wejdź na pierwszą mapę. Wpisz /list na czacie, by zobaczyć komendy."
+
+#: patterns/how-to-start.php:18
+msgid "Join the events"
+msgstr "Dołącz do wydarzeń"
+
+#: patterns/how-to-start.php:18
+msgid "Blood Castle, Devil Square and invasions run on a schedule. Gather a group and take part."
+msgstr "Blood Castle, Devil Square i inwazje startują według harmonogramu. Zbierz grupę i weź udział."
+
+#: patterns/how-to-start.php:18
+msgid "Schedule"
+msgstr "Harmonogram"
+
+#: patterns/how-to-start.php:26
+msgid "New here?"
+msgstr "Jesteś tu nowy?"
+
+#: patterns/how-to-start.php:30
+msgid "How to start"
+msgstr "Jak zacząć"
+
+#: patterns/how-to-start.php:34
+msgid "Four steps from the first click to your first event."
+msgstr "Cztery kroki od pierwszego kliknięcia do pierwszego wydarzenia."
+
+#: patterns/news-archive.php
+msgctxt "Pattern title"
+msgid "News archive"
+msgstr "Archiwum aktualności"
+
+#: patterns/news-archive.php
+msgctxt "Pattern description"
+msgid "Title band and a grid of all posts with pagination; used by the posts page, categories, tags and dates."
+msgstr "Pasek tytułu i siatka wszystkich wpisów ze stronicowaniem; używana na stronie wpisów, w kategoriach, tagach i datach."
+
+#: patterns/news-archive.php:13
+msgid "Updates, events and announcements from the realm."
+msgstr "Nowości, wydarzenia i ogłoszenia z krainy."
+
+#: patterns/news-archive.php:47
+msgid "There are no posts here yet."
+msgstr "Nie ma tu jeszcze wpisów."
+
+#: patterns/news-latest.php
+msgctxt "Pattern title"
+msgid "Latest news"
+msgstr "Najnowsze aktualności"
+
+#: patterns/news-latest.php
+msgctxt "Pattern description"
+msgid "The three newest posts as painted cards; posts without a featured image get one of the theme's fallback pictures."
+msgstr "Trzy najnowsze wpisy jako malowane karty; wpisy bez obrazka wyróżniającego dostają jeden z zapasowych obrazków motywu."
+
+#: patterns/news-latest.php:19
+msgid "From the realm"
+msgstr "Z krainy"
+
+#: patterns/news-latest.php:23
+msgid "Latest news"
+msgstr "Najnowsze aktualności"
+
+#: patterns/news-latest.php:52
+#: patterns/post-single.php:48
+msgid "All news"
+msgstr "Wszystkie aktualności"
+
+#: patterns/not-found.php
+msgctxt "Pattern title"
+msgid "Page not found"
+msgstr "Nie znaleziono strony"
+
+#: patterns/not-found.php
+msgctxt "Pattern description"
+msgid "The 404 page: a large 404, a short message, search and two ways back."
+msgstr "Strona 404: duże 404, krótki komunikat, wyszukiwarka i dwie drogi powrotu."
+
+#: patterns/not-found.php:20
+msgid "This path is lost in the snow"
+msgstr "Ta ścieżka zginęła w śniegu"
+
+#: patterns/not-found.php:24
+msgid "The page you are looking for does not exist or has moved. Try a search, or head back to a safe town."
+msgstr "Szukana strona nie istnieje albo została przeniesiona. Spróbuj wyszukiwarki lub wróć do bezpiecznego miasta."
+
+#: patterns/not-found.php:27
+#: patterns/search-results.php:13
+#: patterns/search-results.php:16
+msgid "Search"
+msgstr "Szukaj"
+
+#: patterns/not-found.php:27
+#: patterns/search-results.php:16
+msgid "Search the news…"
+msgstr "Przeszukaj aktualności…"
+
+#: patterns/not-found.php:31
+msgid "Back to the home page"
+msgstr "Wróć na stronę główną"
+
+#: patterns/page-account.php
+msgctxt "Pattern title"
+msgid "Account page"
+msgstr "Strona konta"
+
+#: patterns/page-account.php
+msgctxt "Pattern description"
+msgid "Page body of the account page: title band and the player account block (log in, characters, password)."
+msgstr "Treść strony konta: pasek tytułu i blok konta gracza (logowanie, postacie, hasło)."
+
+#: patterns/page-account.php:15
+msgid "Your account"
+msgstr "Twoje konto"
+
+#: patterns/page-account.php:15
+msgid "Log in with your game account to see your characters, change the password or create a new account."
+msgstr "Zaloguj się kontem z gry, by zobaczyć swoje postacie, zmienić hasło lub założyć nowe konto."
+
+#: patterns/page-armory.php
+msgctxt "Pattern title"
+msgid "Armory page"
+msgstr "Strona zbrojowni"
+
+#: patterns/page-armory.php
+msgctxt "Pattern description"
+msgid "Page body of the armory page: title band, character search and the equipment view."
+msgstr "Treść strony zbrojowni: pasek tytułu, wyszukiwarka postaci i widok ekwipunku."
+
+#: patterns/page-armory.php:15
+msgid "Look up any character: class, level and every piece of equipment, with the in-game item details."
+msgstr "Sprawdź dowolną postać: klasę, poziom i każdy element ekwipunku, ze szczegółami przedmiotów jak w grze."
+
+#: patterns/page-commands.php
+msgctxt "Pattern title"
+msgid "Commands page"
+msgstr "Strona komend"
+
+#: patterns/page-commands.php
+msgctxt "Pattern description"
+msgid "Page body of the commands page: title band and a table of the chat commands players can use. Remove the commands your server has switched off."
+msgstr "Treść strony komend: pasek tytułu i tabela komend czatu dostępnych dla graczy. Usuń komendy, które Twój serwer wyłączył."
+
+#: patterns/page-commands.php:20
+msgid "Travels to a map, for example /move devias."
+msgstr "Przenosi na mapę, na przykład /move devias."
+
+#: patterns/page-commands.php:21
+msgid "Sends a message to all players on the server."
+msgstr "Wysyła wiadomość do wszystkich graczy na serwerze."
+
+#: patterns/page-commands.php:22
+msgid "Sends a message to the world chat, which players on all game servers can read."
+msgstr "Wysyła wiadomość na czat światowy, który czytają gracze ze wszystkich serwerów gry."
+
+#: patterns/page-commands.php:23
+msgid "Adds level-up points to a stat, for example /add str 10. The last stat is command (Dark Lord)."
+msgstr "Dodaje punkty awansu do statystyki, na przykład /add str 10. Ostatnia statystyka to dowodzenie (Dark Lord)."
+
+#: patterns/page-commands.php:24
+msgid "Shortcuts that add points to one stat, for example /addvit 20."
+msgstr "Skróty dodające punkty do jednej statystyki, na przykład /addvit 20."
+
+#: patterns/page-commands.php:25
+msgid "Resets the character when it reaches the required level."
+msgstr "Resetuje postać, gdy osiągnie wymagany poziom."
+
+#: patterns/page-commands.php:26
+msgid "Shows the cost and the points granted for your next reset."
+msgstr "Pokazuje koszt i punkty przyznawane za kolejny reset."
+
+#: patterns/page-commands.php:27
+msgid "Resets the stat points of your character."
+msgstr "Zeruje punkty statystyk Twojej postaci."
+
+#: patterns/page-commands.php:28
+msgid "Clears your player-killer status for a fee."
+msgstr "Zdejmuje status zabójcy graczy za opłatą."
+
+#: patterns/page-commands.php:29
+msgid "Keeps your character leveling in the world after you disconnect. The MU Helper must be running."
+msgstr "Utrzymuje postać w świecie i levelującą po rozłączeniu. MU Helper musi być włączony."
+
+#: patterns/page-commands.php:30
+msgid "Lists the items that are waiting for free space in your inventory."
+msgstr "Wyświetla przedmioty czekające na wolne miejsce w ekwipunku."
+
+#: patterns/page-commands.php:31
+msgid "Sends a guild war request to the guild master of the given guild."
+msgstr "Wysyła prośbę o wojnę gildii do mistrza podanej gildii."
+
+#: patterns/page-commands.php:32
+msgid "Sends a battle soccer request to the guild master of the given guild."
+msgstr "Wysyła prośbę o Battle Soccer do mistrza podanej gildii."
+
+#: patterns/page-commands.php:33
+msgid "Sets the price of an item in your personal store, for example /shopprice 1 10 bless. Without arguments it lists your prices."
+msgstr "Ustawia cenę przedmiotu w Twoim sklepie osobistym, na przykład /shopprice 1 10 bless. Bez argumentów wyświetla Twoje ceny."
+
+#: patterns/page-commands.php:34
+msgid "Opens the merchant window or your warehouse from anywhere, if the server offers it."
+msgstr "Otwiera okno handlarza lub Twój magazyn z dowolnego miejsca, jeśli serwer to oferuje."
+
+#: patterns/page-commands.php:35
+msgid "Changes the language of your account, for example /language pl."
+msgstr "Zmienia język Twojego konta, na przykład /language pl."
+
+#: patterns/page-commands.php:36
+msgid "Links your account to Discord. /discord link creates a code to enter in Discord, /discord unlink removes the link."
+msgstr "Łączy Twoje konto z Discordem. /discord link tworzy kod do wpisania na Discordzie, /discord unlink usuwa powiązanie."
+
+#: patterns/page-commands.php:37
+msgid "Lists the commands available to you, with their usage."
+msgstr "Wyświetla dostępne dla Ciebie komendy wraz z użyciem."
+
+#: patterns/page-commands.php:38
+msgid "Shows how to use one command, for example /help move."
+msgstr "Pokazuje, jak użyć jednej komendy, na przykład /help move."
+
+#: patterns/page-commands.php:41
+msgid "Type these in the game chat. Values in angle brackets are yours to fill in; some commands may be switched off on this server."
+msgstr "Wpisuj je na czacie w grze. Wartości w nawiasach ostrych uzupełniasz sam; niektóre komendy mogą być wyłączone na tym serwerze."
+
+#: patterns/page-commands.php:48
+msgid "Command"
+msgstr "Komenda"
+
+#: patterns/page-commands.php:48
+msgid "What it does"
+msgstr "Co robi"
+
+#: patterns/page-download.php
+msgctxt "Pattern title"
+msgid "Download page"
+msgstr "Strona pobierania"
+
+#: patterns/page-download.php
+msgctxt "Pattern description"
+msgid "Page body of the download page: title band, a painted banner, a card for each way to get the game and the minimum requirements. Set each button's link to your download address and delete the options you do not offer."
+msgstr "Treść strony pobierania: pasek tytułu, malowany baner, karta dla każdego sposobu zdobycia gry i wymagania minimalne. Ustaw w każdym przycisku adres pobierania i usuń opcje, których nie oferujesz."
+
+#: patterns/page-download.php:18
+msgid "Launcher"
+msgstr "Launcher"
+
+#: patterns/page-download.php:18
+msgid "Installs the game and keeps it up to date."
+msgstr "Instaluje grę i utrzymuje ją aktualną."
+
+#: patterns/page-download.php:18
+msgid "Linux and Windows"
+msgstr "Linux i Windows"
+
+#: patterns/page-download.php:18
+msgid "Recommended for most players"
+msgstr "Polecany większości graczy"
+
+#: patterns/page-download.php:18
+msgid "Download the launcher"
+msgstr "Pobierz launcher"
+
+#: patterns/page-download.php:19
+msgid "Full client: Windows"
+msgstr "Pełny klient: Windows"
+
+#: patterns/page-download.php:19
+#: patterns/page-download.php:20
+msgid "The whole game in one archive."
+msgstr "Cała gra w jednym archiwum."
+
+#: patterns/page-download.php:19
+msgid "64-bit Windows"
+msgstr "64-bitowy Windows"
+
+#: patterns/page-download.php:19
+#: patterns/page-download.php:20
+msgid "For players who update by hand"
+msgstr "Dla graczy aktualizujących ręcznie"
+
+#: patterns/page-download.php:19
+msgid "Download for Windows"
+msgstr "Pobierz dla Windows"
+
+#: patterns/page-download.php:20
+msgid "Full client: Linux"
+msgstr "Pełny klient: Linux"
+
+#: patterns/page-download.php:20
+msgid "64-bit Linux"
+msgstr "64-bitowy Linux"
+
+#: patterns/page-download.php:20
+msgid "Download for Linux"
+msgstr "Pobierz dla Linuksa"
+
+#: patterns/page-download.php:23
+msgid "Get the game"
+msgstr "Zdobądź grę"
+
+#: patterns/page-download.php:23
+msgid "Pick one. All of them connect to the same server."
+msgstr "Wybierz jedno. Wszystkie łączą się z tym samym serwerem."
+
+#: patterns/page-download.php:30
+msgid "Ready in minutes"
+msgstr "Gotowe w kilka minut"
+
+#: patterns/page-download.php:34
+msgid "Download, log in, play"
+msgstr "Pobierz, zaloguj się, graj"
+
+#: patterns/page-download.php:38
+msgid "Install the game, sign in with your account and step into the world. No account yet? Create one first, it takes a minute."
+msgstr "Zainstaluj grę, zaloguj się kontem i wejdź do świata. Nie masz jeszcze konta? Załóż je najpierw, zajmie to minutę."
+
+#. translators: %s: operating system.
+#: patterns/page-download.php:67
+#, php-format
+msgid "System: %s"
+msgstr "System: %s"
+
+#: patterns/page-download.php:84
+msgid "Minimum requirements"
+msgstr "Wymagania minimalne"
+
+#: patterns/page-download.php:89
+msgid "System"
+msgstr "System"
+
+#: patterns/page-download.php:89
+msgid "64-bit Windows 10 or later, or 64-bit Linux"
+msgstr "64-bitowy Windows 10 lub nowszy albo 64-bitowy Linux"
+
+#: patterns/page-download.php:90
+msgid "Processor"
+msgstr "Procesor"
+
+#: patterns/page-download.php:90
+msgid "Dual core, 2 GHz"
+msgstr "Dwa rdzenie, 2 GHz"
+
+#: patterns/page-download.php:91
+msgid "Memory"
+msgstr "Pamięć"
+
+#: patterns/page-download.php:91
+msgid "4 GB RAM"
+msgstr "4 GB RAM"
+
+#: patterns/page-download.php:92
+msgid "Graphics"
+msgstr "Grafika"
+
+#: patterns/page-download.php:92
+msgid "Any graphics card with OpenGL support"
+msgstr "Dowolna karta graficzna z obsługą OpenGL"
+
+#: patterns/page-download.php:93
+msgid "Disk space"
+msgstr "Miejsce na dysku"
+
+#: patterns/page-download.php:93
+msgid "2 GB free"
+msgstr "2 GB wolnego miejsca"
+
+#: patterns/page-events.php
+msgctxt "Pattern title"
+msgid "Events page"
+msgstr "Strona wydarzeń"
+
+#: patterns/page-events.php
+msgctxt "Pattern description"
+msgid "Page body of the events page: title band and the event schedule of every game server."
+msgstr "Treść strony wydarzeń: pasek tytułu i harmonogram wydarzeń każdego serwera gry."
+
+#: patterns/page-events.php:15
+msgid "When the next Blood Castle, Devil Square, Chaos Castle and invasions start, in the site's time zone."
+msgstr "Kiedy startują najbliższe Blood Castle, Devil Square, Chaos Castle i inwazje, w strefie czasowej strony."
+
+#: patterns/page-generic.php
+msgctxt "Pattern title"
+msgid "Page with title band"
+msgstr "Strona z paskiem tytułu"
+
+#: patterns/page-generic.php
+msgctxt "Pattern description"
+msgid "Title band and a readable column for the page's own content; used by every page without a dedicated template."
+msgstr "Pasek tytułu i czytelna kolumna na treść strony; używane przez każdą stronę bez własnego szablonu."
+
+#: patterns/page-mini-games.php
+msgctxt "Pattern title"
+msgid "Mini games page"
+msgstr "Strona mini gier"
+
+#: patterns/page-mini-games.php
+msgctxt "Pattern description"
+msgid "Page body of the mini games page: title band and the mini game leaderboards."
+msgstr "Treść strony mini gier: pasek tytułu i rankingi mini gier."
+
+#: patterns/page-mini-games.php:15
+msgid "Blood Castle, Devil Square, Chaos Castle and more: the best results of the last days."
+msgstr "Blood Castle, Devil Square, Chaos Castle i inne: najlepsze wyniki ostatnich dni."
+
+#: patterns/page-ranking.php
+msgctxt "Pattern title"
+msgid "Ranking page"
+msgstr "Strona rankingu"
+
+#: patterns/page-ranking.php
+msgctxt "Pattern description"
+msgid "Page body of the ranking page: title band, top characters in a glass panel and the page's own content."
+msgstr "Treść strony rankingu: pasek tytułu, najlepsze postacie w szklanym panelu i własna treść strony."
+
+#: patterns/page-ranking.php:15
+#: patterns/ranking-top.php:19
+msgid "Hall of heroes"
+msgstr "Galeria bohaterów"
+
+#: patterns/page-ranking.php:15
+msgid "The strongest characters on the server, ordered by resets and level. Select a name to open the armory."
+msgstr "Najsilniejsze postacie na serwerze, według resetów i poziomu. Wybierz nick, by otworzyć zbrojownię."
+
+#: patterns/post-single.php
+msgctxt "Pattern title"
+msgid "Single post"
+msgstr "Pojedynczy wpis"
+
+#: patterns/post-single.php
+msgctxt "Pattern description"
+msgid "A news article: title band with date and category, the painted featured image, the text and previous/next links."
+msgstr "Artykuł: pasek tytułu z datą i kategorią, malowany obrazek wyróżniający, tekst i linki do poprzedniego/następnego."
+
+#: patterns/post-single.php:38
+msgid "Tags: "
+msgstr "Tagi: "
+
+#: patterns/post-single.php:44
+msgid "Previous"
+msgstr "Poprzedni"
+
+#: patterns/post-single.php:52
+msgid "Next"
+msgstr "Następny"
+
+#: patterns/ranking-top.php
+msgctxt "Pattern title"
+msgid "Top 5 ranking"
+msgstr "Ranking top 5"
+
+#: patterns/ranking-top.php
+msgctxt "Pattern description"
+msgid "The five best characters in a glass panel, with a link to the full ranking."
+msgstr "Pięć najlepszych postaci w szklanym panelu, z linkiem do pełnego rankingu."
+
+#: patterns/ranking-top.php:23
+msgid "Top 5 characters"
+msgstr "Top 5 postaci"
+
+#: patterns/ranking-top.php:27
+msgid "The strongest heroes on the server by resets and level. Select a name to see its equipment."
+msgstr "Najsilniejsi bohaterowie serwera wg resetów i poziomu. Wybierz nick, by zobaczyć ekwipunek."
+
+#: patterns/ranking-top.php:40
+msgid "Full ranking"
+msgstr "Pełny ranking"
+
+#: patterns/search-results.php
+msgctxt "Pattern title"
+msgid "Search results"
+msgstr "Wyniki wyszukiwania"
+
+#: patterns/search-results.php
+msgctxt "Pattern description"
+msgid "Title band, a search field and the matching posts as cards."
+msgstr "Pasek tytułu, pole wyszukiwania i pasujące wpisy jako karty."
+
+#: patterns/search-results.php:52
+msgid "Nothing found. Try another word."
+msgstr "Nic nie znaleziono. Spróbuj innego słowa."
+
+#: blocks/site-nav/block.json
+msgctxt "block title"
+msgid "Aurora main menu"
+msgstr "Menu główne Aurora"
+
+#: blocks/site-nav/block.json
+msgctxt "block description"
+msgid "The fixed main menu of an OpenMU site: Home, News, Download, the Server submenu (Ranking, Mini games, Armory, Events, Commands) and Account, plus the Play now button. Labels follow the page titles."
+msgstr "Stałe menu główne strony OpenMU: Start, Aktualności, Pobierz, podmenu Serwer (Ranking, Mini gry, Zbrojownia, Wydarzenia, Komendy) i Konto oraz przycisk Graj teraz. Etykiety podążają za tytułami stron."
+
+#: theme.json
+msgctxt "Color name"
+msgid "Midnight"
+msgstr "Północ"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Night"
+msgstr "Noc"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Dusk"
+msgstr "Zmierzch"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Frost"
+msgstr "Szron"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Silver text"
+msgstr "Srebrny tekst"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Silver"
+msgstr "Srebro"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Muted"
+msgstr "Przygaszony"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Line"
+msgstr "Linia"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Aurora teal"
+msgstr "Turkus zorzy"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Aurora violet"
+msgstr "Fiolet zorzy"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Aurora rose"
+msgstr "Róż zorzy"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Text on accent"
+msgstr "Tekst na akcencie"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Item: ancient"
+msgstr "Przedmiot: ancient"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Item: option"
+msgstr "Przedmiot: opcja"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Aurora"
+msgstr "Zorza"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Aurora soft"
+msgstr "Zorza łagodna"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Night"
+msgstr "Noc"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Marcellus SC"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Manrope"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Monospace"
+msgstr "Stałej szerokości"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Mały"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Base"
+msgstr "Podstawowy"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Średni"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Duży"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra large"
+msgstr "Bardzo duży"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge"
+msgstr "Ogromny"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XS"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "S"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "M"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "L"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XXL"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Glass"
+msgstr "Szkło"
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Aurora glow"
+msgstr "Poświata zorzy"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "Nagłówek"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Stopka"

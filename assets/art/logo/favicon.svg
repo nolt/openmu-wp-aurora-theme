@@ -1,0 +1,15 @@
+<!-- OpenMU Aurora favicon: simplified crystal on a dark rounded tile (reads at 16-32 px).
+     Hand-written, GPL-2.0-or-later, (c) Nolt. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="oaf-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ee6c1"/>
+      <stop offset="0.6" stop-color="#8a6cff"/>
+      <stop offset="1" stop-color="#ff6fae"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0b1224"/>
+  <path d="M32 8 L45 26 L32 56 L19 26 Z" fill="url(#oaf-g)"/>
+  <path d="M32 8 L45 26 L32 26 Z" fill="#fff" opacity="0.35"/>
+  <path d="M10 30 Q16 24 21 28 M54 30 Q48 24 43 28" fill="none" stroke="#dfe8ff" stroke-width="3" stroke-linecap="round"/>
+</svg>

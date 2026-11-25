@@ -1,0 +1,21 @@
+<!-- Thin silver corner ornament (top-left). Rotate/flip in CSS for the other three corners.
+     Two hairlines meeting in a corner with a small aurora diamond. Hand-written, GPL-2.0-or-later, (c) Nolt. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="presentation">
+  <defs>
+    <linearGradient id="oac-h" x1="0" x2="1">
+      <stop offset="0" stop-color="#dfe8ff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#dfe8ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="oac-v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dfe8ff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#dfe8ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="92" height="1.5" fill="url(#oac-h)"/>
+  <rect x="2" y="2" width="1.5" height="92" fill="url(#oac-v)"/>
+  <rect x="10" y="10" width="52" height="1" fill="url(#oac-h)" opacity="0.6"/>
+  <rect x="10" y="10" width="1" height="52" fill="url(#oac-v)" opacity="0.6"/>
+  <path d="M2 14 L14 2" stroke="#3ee6c1" stroke-width="1.25" fill="none"/>
+  <path d="M18 18 L22 14 L26 18 L22 22 Z" fill="#8a6cff"/>
+  <path d="M18 18 L22 14 L26 18 L22 22 Z" fill="none" stroke="#3ee6c1" stroke-width="1"/>
+</svg>

@@ -1,0 +1,29 @@
+/*
+ * OpenMU Aurora - editor styles.
+ *
+ * Makes the block editor and the site editor look like the front end: dark canvas, the theme
+ * fonts (declared by theme.json), glass panels, gradient text and the pill buttons. The
+ * animated background is not drawn in the editor; the canvas is the plain night colour.
+ */
+.editor-styles-wrapper {
+	background: #060a14;
+	color: #c3cee8;
+}
+.editor-styles-wrapper .is-style-mu-window {
+	padding: 1.5rem;
+	background: linear-gradient(155deg, rgb(255 255 255 / 8%), rgb(255 255 255 / 1.5%) 55%), rgb(12 19 38 / 70%);
+	border: 1px solid rgb(223 232 255 / 14%);
+	border-radius: 18px;
+}
+.editor-styles-wrapper .au-gradient-text {
+	background: linear-gradient(110deg, #3ee6c1, #8a6cff 55%, #ff6fae);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+}
+.editor-styles-wrapper .au-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #3ee6c1; }
+.editor-styles-wrapper .au-pagehero, .editor-styles-wrapper .au-section-head, .editor-styles-wrapper .au-hero { text-align: center; }
+.editor-styles-wrapper .wp-block-button__link { border-radius: 999px; }
+.editor-styles-wrapper .is-style-ghost .wp-block-button__link { background: rgb(255 255 255 / 5%); color: #dfe8ff; border: 1px solid rgb(223 232 255 / 28%); }
+.editor-styles-wrapper code { padding: 0.15em 0.45em; background: rgb(138 108 255 / 14%); border: 1px solid rgb(138 108 255 / 28%); border-radius: 6px; }

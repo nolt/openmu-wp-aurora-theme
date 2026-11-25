@@ -1,0 +1,144 @@
+/*
+ * OpenMU Aurora - the stage (animated painted background), markup in inc/stage.php, motion in aurora.js.
+ *
+ * One fixed box behind the site. Back to front: sky, aurora canvas, four scenery layers
+ * (far peaks, citadel, near cliffs, mist), snow canvas, poster (reduced motion only), veil.
+ * Art files may not exist yet: the sky then falls back to a gradient and missing layers
+ * simply are not printed.
+ */
+
+.au-stage {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	overflow: hidden;
+	background: var(--au-bg);
+	/* The stage never takes clicks. */
+	pointer-events: none;
+	contain: strict;
+}
+
+/* Sky: painted image when present, otherwise a night gradient with a faint horizon glow. */
+.au-stage__sky {
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(ellipse 80% 45% at 50% 100%, rgb(62 230 193 / 16%), transparent 70%),
+		radial-gradient(ellipse 60% 50% at 78% 20%, rgb(138 108 255 / 20%), transparent 70%),
+		linear-gradient(180deg, #050914 0%, #0a1226 55%, #10182b 100%);
+	background-size: cover;
+	background-position: center bottom;
+}
+
+/* Aurora canvas: drawn at low resolution by the script and smoothly enlarged; soft by nature. */
+.au-stage__aurora,
+.au-stage__snow {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+.au-stage__aurora { opacity: 0.9; mix-blend-mode: screen; }
+
+/*
+ * Scenery layer: the pictures are 2560 px wide with different heights (peaks 1009, citadel 1250,
+ * cliffs 942, mist 647), painted to stack bottom-aligned at the same width. Each layer is a flex
+ * row that centres its picture, so on narrow tall screens the picture overflows equally on both
+ * sides instead of shrinking to a thin strip: its width is the larger of the screen width (plus a
+ * margin for the sideways parallax) and 150% of the screen height. The script moves the layer with transform.
+ */
+.au-layer {
+	position: absolute;
+	inset: auto 0 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	will-change: transform;
+}
+.au-layer img {
+	flex: none;
+	display: block;
+	width: max(106vw, 150svh);
+	height: auto;
+}
+/* Per-layer fitting into one scene: the far layers are pushed down a little so the headline has sky. */
+.au-layer--peaks-far { bottom: -3%; }
+.au-layer--peaks-far img { filter: brightness(0.9) saturate(0.95); }
+/*
+ * The castle cut-out has hard edges: a slight blur and darkening match it to the hazy
+ * peaks, and a fade at its foot lets the cliffs and the mist take over (no pasted-on look).
+ */
+.au-layer--citadel { bottom: -9%; justify-content: flex-end; }
+/* Smaller and pushed to the right edge so the castle frames the headline instead of sitting behind it. */
+.au-layer--citadel img { width: calc(max(106vw, 150svh) * 0.78); }
+.au-layer--citadel img {
+	filter: blur(0.7px) brightness(0.82) saturate(0.85) contrast(0.95);
+	-webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 96%);
+	mask-image: linear-gradient(180deg, #000 55%, transparent 96%);
+}
+.au-layer--cliffs-near { bottom: -6%; }
+.au-layer--cliffs-near img { filter: brightness(0.85); }
+.au-layer--mist { bottom: -4%; }
+.au-layer--mist img { opacity: 0.8; }
+/* Mist drifts slowly sideways by itself (CSS only; stopped for reduced motion below). */
+.au-layer--mist img { animation: au-mist 60s ease-in-out infinite alternate; }
+@keyframes au-mist {
+	from { transform: translate3d(-2%, 0, 0); }
+	to { transform: translate3d(2%, 0, 0); }
+}
+
+/* Poster: flattened picture for reduced motion (and a fallback when scripts are off). */
+.au-stage__poster {
+	display: none;
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 100%;
+}
+
+/*
+ * Veil: darkens the scene for readable text. Light on the hero of the front page, strong on
+ * subpages ("au-calm"); the script raises it while the front page is scrolled.
+ */
+.au-stage__veil {
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(180deg, rgb(6 10 20 / 55%) 0%, transparent 22%, transparent 55%, rgb(6 10 20 / 55%) 100%),
+		rgb(6 10 20 / 10%);
+	transition: opacity 0.3s linear;
+}
+.au-home .au-stage__veil {
+	background:
+		radial-gradient(ellipse 60% 42% at 50% 46%, rgb(6 10 20 / 62%), transparent 75%),
+		linear-gradient(180deg, rgb(6 10 20 / 55%) 0%, transparent 24%, transparent 55%, rgb(6 10 20 / 55%) 100%),
+		rgb(6 10 20 / 8%);
+}
+.au-calm .au-stage__veil {
+	background: linear-gradient(180deg, rgb(6 10 20 / 70%), rgb(6 10 20 / 82%) 60%, rgb(6 10 20 / 92%));
+}
+/* Calm pages: the near layers sink and dim so only the far scenery shows through. */
+.au-calm .au-layer--cliffs-near,
+.au-calm .au-layer--mist { opacity: 0.55; }
+.au-calm .au-stage__aurora { opacity: 0.55; }
+
+@media (prefers-reduced-motion: reduce) {
+	.au-layer { transform: none !important; }
+	.au-layer--mist img { animation: none; }
+	.au-stage__aurora, .au-stage__snow { display: none; }
+	/* The poster replaces the layered scene when it exists; without it the layers stay as a still picture. */
+	.au-stage__poster { display: block; }
+	.au-stage:has(.au-stage__poster) .au-layer { display: none; }
+}
+
+/* Extra darkening that grows while the front page is scrolled past the hero (--au-dim is set by the script, 0..1). */
+.au-stage__veil::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgb(6 10 20 / 78%);
+	opacity: var(--au-dim, 0);
+}
+.au-calm .au-stage__veil::after { display: none; }

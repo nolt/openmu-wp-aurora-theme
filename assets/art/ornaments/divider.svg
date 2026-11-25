@@ -1,0 +1,22 @@
+<!-- Thin silver/aurora divider: hairlines fading out towards both ends with a small central crystal.
+     Hand-written, GPL-2.0-or-later, (c) Nolt. Stretches horizontally (preserveAspectRatio none is NOT used,
+     the centre keeps its shape; set a fixed height in CSS). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 24" width="600" height="24" role="presentation">
+  <defs>
+    <linearGradient id="oad-l" x1="0" x2="1">
+      <stop offset="0" stop-color="#dfe8ff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#dfe8ff" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="oad-r" x1="1" x2="0">
+      <stop offset="0" stop-color="#dfe8ff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#dfe8ff" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect x="20" y="11.5" width="246" height="1" fill="url(#oad-l)"/>
+  <rect x="334" y="11.5" width="246" height="1" fill="url(#oad-r)"/>
+  <!-- centre crystal and two small flanking diamonds -->
+  <path d="M300 3 L308 12 L300 21 L292 12 Z" fill="none" stroke="#3ee6c1" stroke-width="1.25"/>
+  <path d="M300 7.5 L304 12 L300 16.5 L296 12 Z" fill="#8a6cff"/>
+  <path d="M278 12 L282 8 L286 12 L282 16 Z" fill="#dfe8ff" opacity="0.8"/>
+  <path d="M314 12 L318 8 L322 12 L318 16 Z" fill="#dfe8ff" opacity="0.8"/>
+</svg>

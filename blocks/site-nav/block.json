@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "openmu-aurora/site-nav",
+	"title": "Aurora main menu",
+	"category": "theme",
+	"icon": "menu",
+	"description": "The fixed main menu of an OpenMU site: Home, News, Download, the Server submenu (Ranking, Mini games, Armory, Events, Commands) and Account, plus the Play now button. Labels follow the page titles.",
+	"textdomain": "openmu-aurora",
+	"supports": { "html": false, "autoRegister": true, "inserter": false, "multiple": false },
+	"render": "file:./render.php"
+}

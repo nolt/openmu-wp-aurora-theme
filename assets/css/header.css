@@ -1,0 +1,290 @@
+/*
+ * OpenMU Aurora - header: brand, main menu, "Play now" button, Server dropdown and the
+ * full-screen mobile menu. Markup: patterns/header.php and blocks/site-nav/render.php;
+ * behaviour: assets/js/aurora.js (aria-expanded + "is-open"/"is-scrolled" classes).
+ */
+
+/* The template part wrapper: sticks to the top; the script adds .is-scrolled to make it compact and frosted. */
+.wp-site-blocks > * { margin-block: 0; }
+.au-header {
+	position: sticky;
+	top: var(--wp-admin--admin-bar--height, 0px);
+	z-index: 100;
+	--au-header-h: 82px;
+	transition: --au-header-h 0.3s;
+}
+.au-header.is-scrolled { --au-header-h: 60px; }
+
+/* Frosted background: invisible at the very top (the hero shows through), glass once scrolled. */
+.au-header::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: linear-gradient(180deg, rgb(6 10 20 / 62%), rgb(6 10 20 / 0%));
+	transition: background-color 0.35s, backdrop-filter 0.35s;
+}
+.au-header.is-scrolled::before,
+.au-nav-open .au-header::before {
+	background: rgb(7 12 26 / 74%);
+	backdrop-filter: blur(20px) saturate(160%);
+	-webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+/* Thin silver line under the header that fades out towards both ends. */
+.au-header::after {
+	content: "";
+	position: absolute;
+	inset: auto 0 0;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, var(--au-line-strong) 20%, var(--au-line-strong) 80%, transparent);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.au-header.is-scrolled::after { opacity: 1; }
+
+.au-header__bar {
+	display: flex;
+	align-items: center;
+	gap: clamp(0.75rem, 2vw, 2rem);
+	box-sizing: border-box;
+	max-width: 1360px;
+	height: var(--au-header-h);
+	margin-inline: auto;
+	padding-inline: clamp(1rem, 3vw, 2rem);
+	transition: height 0.3s var(--au-ease);
+}
+
+/* ---------- Brand ------------------------------------------------------------ */
+.au-brand {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	min-width: 0;
+	margin-inline-end: auto;
+}
+.au-brand__emblem { display: block; width: 40px; height: 40px; flex: none; transition: width 0.3s, height 0.3s, filter 0.3s; filter: drop-shadow(0 0 12px rgb(62 230 193 / 35%)); }
+.is-scrolled .au-brand__emblem { width: 32px; height: 32px; }
+.au-brand:hover .au-brand__emblem { filter: drop-shadow(0 0 16px rgb(138 108 255 / 70%)); }
+/* Fallback mark while the emblem art does not exist yet: a small aurora diamond. */
+.au-brand__mark {
+	width: 30px;
+	height: 30px;
+	flex: none;
+	rotate: 45deg;
+	border-radius: 7px;
+	background: var(--au-aurora);
+	box-shadow: 0 0 22px rgb(62 230 193 / 45%);
+}
+.au-brand .wp-block-site-title {
+	margin: 0;
+	min-width: 0;
+	font-size: clamp(1.05rem, 0.9rem + 0.7vw, 1.35rem);
+	letter-spacing: 0.1em;
+	line-height: 1.2;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.au-brand .wp-block-site-title a { color: var(--au-silver); text-decoration: none; padding-block: 0.15em; }
+.au-brand .wp-block-site-title a:hover { color: #fff; }
+
+/* ---------- Menu (desktop) ---------------------------------------------------- */
+.au-navwrap { display: contents; }
+.au-nav__list { display: flex; align-items: center; gap: 0.25rem; margin: 0; padding: 0; list-style: none; }
+.au-nav__item { position: relative; margin: 0; }
+.au-nav__link {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45em;
+	padding: 0.7em 0.95em;
+	font: inherit;
+	font-size: 0.9rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	color: var(--au-text);
+	text-decoration: none;
+	background: none;
+	border: 0;
+	border-radius: 999px;
+	cursor: pointer;
+	transition: color 0.2s, background-color 0.2s;
+}
+.au-nav__link::after {
+	content: "";
+	position: absolute;
+	inset: auto 0.95em 0.35em;
+	height: 2px;
+	border-radius: 2px;
+	background: var(--au-aurora);
+	box-shadow: 0 0 10px rgb(62 230 193 / 70%);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s var(--au-ease);
+}
+.au-nav__link:hover,
+.au-nav__sub-toggle[aria-expanded="true"] { color: #fff; background: rgb(223 232 255 / 7%); }
+.au-nav__item.is-current > .au-nav__link { color: #fff; }
+.au-nav__item.is-current > .au-nav__link::after,
+.au-nav__link:hover::after { transform: scaleX(1); }
+.au-nav__chevron { transition: transform 0.25s var(--au-ease); }
+.au-nav__sub-toggle[aria-expanded="true"] .au-nav__chevron { transform: rotate(180deg); }
+
+/* Server dropdown: a glass panel under the button; a transparent top padding bridges the gap so hover is not lost. */
+.au-nav__sub {
+	position: absolute;
+	inset: 100% auto auto 50%;
+	z-index: 5;
+	min-width: 15rem;
+	margin: 0.5rem 0 0;
+	padding: 0.5rem;
+	list-style: none;
+	background: rgb(8 12 26 / 97%);
+	border: 1px solid var(--au-line-strong);
+	border-radius: 16px;
+	backdrop-filter: blur(22px) saturate(160%);
+	-webkit-backdrop-filter: blur(22px) saturate(160%);
+	box-shadow: 0 24px 60px -16px rgb(0 0 0 / 80%), 0 0 40px -14px rgb(62 230 193 / 35%);
+	opacity: 0;
+	visibility: hidden;
+	translate: -50% 8px;
+	transition: opacity 0.2s, translate 0.25s var(--au-ease), visibility 0s 0.25s;
+}
+/* The invisible bridge between the button and the panel. */
+.au-nav__sub::before { content: ""; position: absolute; inset: -0.6rem 0 auto; height: 0.6rem; }
+.au-nav__item--parent.is-open > .au-nav__sub {
+	opacity: 1;
+	visibility: visible;
+	translate: -50% 0;
+	transition-delay: 0s;
+}
+@media (hover: hover) {
+	.au-nav__item--parent:hover > .au-nav__sub { opacity: 1; visibility: visible; translate: -50% 0; transition-delay: 0s; }
+	.au-nav__item--parent:hover > .au-nav__sub-toggle { color: #fff; background: rgb(223 232 255 / 7%); }
+	.au-nav__item--parent:hover .au-nav__chevron { transform: rotate(180deg); }
+}
+.au-nav__sublink {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	padding: 0.65rem 0.85rem;
+	font-size: 0.92rem;
+	font-weight: 600;
+	color: var(--au-text);
+	text-decoration: none;
+	border-radius: 10px;
+	transition: background-color 0.2s, color 0.2s;
+}
+.au-nav__sublink .au-ico { width: 1.25em; height: 1.25em; color: var(--au-teal); opacity: 0.85; }
+.au-nav__sublink:hover,
+.au-nav__sublink:focus-visible { color: #fff; background: rgb(62 230 193 / 12%); }
+.au-nav__subitem.is-current > .au-nav__sublink { color: #fff; background: rgb(138 108 255 / 16%); }
+
+/* ---------- Play now + mobile button ------------------------------------------------ */
+.au-header__actions { display: flex; align-items: center; gap: 0.6rem; }
+.au-nav__play { padding: 0.62em 1.35em; font-size: 0.88rem; font-weight: 800; letter-spacing: 0.05em; text-decoration: none; border-radius: 999px; white-space: nowrap; }
+.au-nav__play-panel { display: none; }
+
+.au-nav__toggle {
+	display: none;
+	position: relative;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	color: var(--au-silver);
+	background: rgb(255 255 255 / 6%);
+	border: 1px solid var(--au-line-strong);
+	border-radius: 50%;
+	cursor: pointer;
+}
+.au-nav__bars { position: absolute; inset: 0; }
+.au-nav__bars i {
+	position: absolute;
+	left: 13px;
+	width: 16px;
+	height: 1.5px;
+	border-radius: 2px;
+	background: currentColor;
+	transition: transform 0.3s var(--au-ease), opacity 0.2s, top 0.3s var(--au-ease);
+}
+.au-nav__bars i:nth-child(1) { top: 15px; }
+.au-nav__bars i:nth-child(2) { top: 21px; }
+.au-nav__bars i:nth-child(3) { top: 27px; }
+.au-nav__toggle[aria-expanded="true"] i:nth-child(1) { top: 21px; transform: rotate(45deg); }
+.au-nav__toggle[aria-expanded="true"] i:nth-child(2) { opacity: 0; }
+.au-nav__toggle[aria-expanded="true"] i:nth-child(3) { top: 21px; transform: rotate(-45deg); }
+
+/* ---------- Mobile: full-screen overlay ------------------------------------------------ */
+@media (max-width: 960px) {
+	.au-nav__toggle { display: block; }
+	.au-nav__play { padding: 0.55em 1.05em; font-size: 0.82rem; }
+
+	/* The overlay covers the screen below the header bar and scrolls if the menu is taller. */
+	.au-nav__panel {
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1.75rem;
+		box-sizing: border-box;
+		padding: calc(var(--au-header-h) + 1.5rem + var(--wp-admin--admin-bar--height, 0px)) clamp(1.5rem, 8vw, 3rem) 2rem;
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		background:
+			radial-gradient(ellipse 80% 50% at 80% 0%, rgb(138 108 255 / 22%), transparent 70%),
+			radial-gradient(ellipse 80% 50% at 10% 100%, rgb(62 230 193 / 16%), transparent 70%),
+			rgb(5 8 18 / 94%);
+		backdrop-filter: blur(24px);
+		-webkit-backdrop-filter: blur(24px);
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-12px);
+		transition: opacity 0.3s, transform 0.4s var(--au-ease), visibility 0s 0.4s;
+	}
+	.au-nav-open .au-nav__panel { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+	.au-nav-open { overflow: hidden; }
+	/* The header must stay above the overlay (the overlay sits in its stacking context at z -1). */
+	.au-nav-open .au-header { z-index: 200; }
+
+	.au-nav__list { flex-direction: column; align-items: stretch; gap: 0.15rem; }
+	.au-nav__link {
+		width: 100%;
+		justify-content: space-between;
+		padding: 0.55em 0.25em;
+		font-family: var(--wp--preset--font-family--heading);
+		font-size: clamp(1.45rem, 6vw, 1.9rem);
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		color: var(--au-silver);
+		border-radius: 0;
+		border-bottom: 1px solid var(--au-line);
+	}
+	.au-nav__link::after { display: none; }
+	.au-nav__item.is-current > .au-nav__link { color: var(--au-teal); }
+
+	/* Submenu: an accordion inside the list instead of a floating panel. */
+	.au-nav__sub {
+		position: static;
+		min-width: 0;
+		margin: 0;
+		padding: 0 0 0 0.5rem;
+		display: none;
+		background: none;
+		border: 0;
+		box-shadow: none;
+		backdrop-filter: none;
+		opacity: 1;
+		visibility: visible;
+		translate: none;
+	}
+	.au-nav__sub::before { display: none; }
+	.au-nav__item--parent.is-open > .au-nav__sub { display: block; translate: none; }
+	.au-nav__sublink { padding: 0.75rem 0.5rem; font-size: 1.05rem; }
+
+	.au-nav__play-panel { display: inline-flex; align-self: stretch; padding: 1em; font-size: 1rem; font-weight: 800; text-decoration: none; border-radius: 999px; }
+}
+@media (max-width: 359px) {
+	.au-nav__play { display: none; }
+}
