@@ -36,7 +36,7 @@ function openmu_aurora_stage(): void {
 	$sky = openmu_aurora_art_url( 'scene/sky.webp' );
 	?>
 	<div class="au-stage" data-au-stage aria-hidden="true">
-		<div class="au-stage__sky"<?php echo '' !== $sky ? ' style="background-image:url(' . esc_url( $sky ) . ')"' : ''; ?>></div>
+		<div class="au-stage__sky"<?php echo '' !== $sky ? ' style="' . esc_attr( 'background-image:' . openmu_aurora_css_url( $sky ) ) . '"' : ''; ?>></div>
 		<canvas class="au-stage__aurora" data-au-aurora></canvas>
 		<?php foreach ( openmu_aurora_stage_layers() as $name => $depth ) : ?>
 			<div class="au-layer au-layer--<?php echo esc_attr( $name ); ?>" data-depth="<?php echo esc_attr( (string) $depth ); ?>">

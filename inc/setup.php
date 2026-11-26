@@ -78,11 +78,15 @@ add_action( 'wp_enqueue_scripts', 'openmu_aurora_enqueue' );
 
 /**
  * Prints the early <head> extras: a "js" class on <html> (so reveal animations only hide
- * content when the script will actually run) and preloads of the two fonts.
+ * content when the script will actually run; taken back if it never starts) and preloads of
+ * the two fonts.
  * Hooked to wp_head at priority 1, before any stylesheet.
  */
 function openmu_aurora_head(): void {
-	echo "<script>document.documentElement.classList.add('js');</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- constant string.
+	// Printed through core, so a Content Security Policy plugin can add its nonce to the tag.
+	// Fail-safe: when the theme script has not started after four seconds (blocked, failed to
+	// load), the "js" class goes again, so the .au-reveal sections it would fade in are shown.
+	wp_print_inline_script_tag( "(function(d){d.classList.add('js');setTimeout(function(){if(!d.classList.contains('au-ready')){d.classList.remove('js');}},4000);})(document.documentElement);" );
 	foreach ( array( 'marcellus-sc.woff2', 'manrope-var.woff2' ) as $font ) {
 		printf(
 			'<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin />' . "\n",
@@ -116,6 +120,25 @@ function openmu_aurora_body_class( array $classes ): array {
 	return $classes;
 }
 add_filter( 'body_class', 'openmu_aurora_body_class' );
+
+/**
+ * Leaves out the OpenMU plugin's blocks on a page that still asks for its password.
+ *
+ * The page templates place the plugin's blocks (ranking, armory, account ...) next to the
+ * page's own content, not inside it, so the password form of the content would not cover
+ * them. Hooked to render_block.
+ *
+ * @param mixed                $content Rendered block; not typed, another filter may hand over null.
+ * @param array<string, mixed> $block   Parsed block.
+ * @return mixed The block, or an empty string on a locked page.
+ */
+function openmu_aurora_hide_plugin_blocks_on_locked_page( $content, array $block ) {
+	if ( str_starts_with( (string) ( $block['blockName'] ?? '' ), 'openmu/' ) && is_singular() && post_password_required( get_queried_object_id() ) ) {
+		return '';
+	}
+	return $content;
+}
+add_filter( 'render_block', 'openmu_aurora_hide_plugin_blocks_on_locked_page', 10, 2 );
 
 /**
  * Registers the pattern categories of the theme's inserter section.

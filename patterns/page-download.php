@@ -25,7 +25,7 @@ $openmu_aurora_options = array(
 <!-- wp:group {"tagName":"section","align":"full","className":"au-pagebody","layout":{"type":"constrained"}} -->
 <section class="wp-block-group alignfull au-pagebody">
 	<!-- wp:group {"align":"wide","className":"au-banner au-reveal","layout":{"type":"default"}} -->
-	<div class="wp-block-group alignwide au-banner au-reveal"<?php echo '' !== $openmu_aurora_banner ? ' style="--au-banner-image:url(' . esc_url( $openmu_aurora_banner ) . ')"' : ''; ?>>
+	<div class="wp-block-group alignwide au-banner au-reveal"<?php echo '' !== $openmu_aurora_banner ? ' style="' . esc_attr( '--au-banner-image:' . openmu_aurora_css_url( $openmu_aurora_banner ) ) . '"' : ''; ?>>
 		<!-- wp:paragraph {"className":"au-eyebrow"} -->
 		<p class="au-eyebrow"><?php esc_html_e( 'Ready in minutes', 'openmu-aurora' ); ?></p>
 		<!-- /wp:paragraph -->

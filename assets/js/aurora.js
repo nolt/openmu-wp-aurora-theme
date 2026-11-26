@@ -17,6 +17,10 @@
 
 	var doc = document;
 	var win = window;
+
+	// Tells the fail-safe in the head (inc/setup.php) that the script runs, so it keeps the "js"
+	// class and with it the hidden-until-revealed state of the .au-reveal sections.
+	doc.documentElement.classList.add( 'au-ready' );
 	var reduce = win.matchMedia( '(prefers-reduced-motion: reduce)' );
 
 	/** Shorthand for querySelectorAll returning a real array. */

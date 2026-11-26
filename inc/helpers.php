@@ -127,24 +127,64 @@ function openmu_aurora_icon_css(): string {
 }
 
 /**
+ * Returns an address as a quoted CSS url() value for a style attribute or a stylesheet.
+ *
+ * esc_url() keeps "(", ")" and "'", which would let an address close an unquoted url() and
+ * add rules of its own; inside double quotes with those characters percent-encoded it stays
+ * one value. Run the result through esc_attr() when it goes into an attribute.
+ *
+ * @param string $url Address of a picture.
+ */
+function openmu_aurora_css_url( string $url ): string {
+	$encoded = strtr(
+		esc_url_raw( $url ),
+		array(
+			'"'  => '%22',
+			"'"  => '%27',
+			'('  => '%28',
+			')'  => '%29',
+			'\\' => '%5C',
+		)
+	);
+	return 'url("' . $encoded . '")';
+}
+
+/**
+ * Returns a page of the theme's fixed set when visitors may see it, else null.
+ *
+ * get_page_by_path() alone also finds drafts, private and scheduled pages and, when no page
+ * has the address, a Media Library upload with that name. Menus, buttons and the footer use
+ * this instead, so they never show the title of a hidden page or lead to someone's upload.
+ *
+ * @param string $slug Page address, e.g. "download".
+ */
+function openmu_aurora_public_page( string $slug ): ?WP_Post {
+	$page = get_page_by_path( $slug, OBJECT, 'page' );
+	return $page instanceof WP_Post && 'publish' === $page->post_status ? $page : null;
+}
+
+/**
  * Returns the address of a page of the theme's fixed set (see inc/site-setup.php) by its slug.
- * Falls back to the plain path so patterns also work before the page exists.
+ * Falls back to the plain path so patterns also work before the page exists (or while it is
+ * hidden: the link then ends on the 404 page instead of naming the hidden page).
  *
  * @param string $slug Page address, e.g. "download".
  */
 function openmu_aurora_page_url( string $slug ): string {
-	$page = get_page_by_path( $slug );
-	return $page ? get_permalink( $page ) : home_url( '/' . $slug . '/' );
+	$page = openmu_aurora_public_page( $slug );
+	$url  = $page ? get_permalink( $page ) : false;
+	return is_string( $url ) && '' !== $url ? $url : home_url( '/' . $slug . '/' );
 }
 
 /**
- * Returns the title of a page of the theme's fixed set, or the given default when the page is missing.
+ * Returns the title of a page of the theme's fixed set, or the given default when the page is
+ * missing or hidden from visitors.
  *
  * @param string $slug    Page address.
  * @param string $fallback Title to use when there is no such page.
  */
 function openmu_aurora_page_title( string $slug, string $fallback ): string {
-	$page = get_page_by_path( $slug );
+	$page = openmu_aurora_public_page( $slug );
 	return $page && '' !== $page->post_title ? get_the_title( $page ) : $fallback;
 }
 

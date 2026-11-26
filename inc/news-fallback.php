@@ -51,12 +51,14 @@ function openmu_aurora_fallback_figure( int $post_id, bool $link, string $extra_
  * Replaces the empty output of a featured image block with the painted fallback.
  * Hooked to render_block_core/post-featured-image.
  *
- * @param string   $content Rendered block (empty when the post has no picture).
+ * @param mixed    $content Rendered block (empty when the post has no picture); not typed,
+ *                          because a filter of another plugin may hand over null.
  * @param array    $block   Parsed block.
  * @param WP_Block $instance Block instance (carries the post in its context).
  * @return string
  */
-function openmu_aurora_featured_image_fallback( string $content, array $block, WP_Block $instance ): string {
+function openmu_aurora_featured_image_fallback( $content, array $block, WP_Block $instance ): string {
+	$content = (string) $content;
 	if ( '' !== trim( $content ) ) {
 		return $content;
 	}

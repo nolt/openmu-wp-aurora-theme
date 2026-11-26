@@ -15,7 +15,7 @@ $openmu_aurora_banner = openmu_aurora_art_url( 'banners/community.webp' );
 <!-- wp:group {"tagName":"section","align":"full","className":"au-section au-cta-section","layout":{"type":"constrained"}} -->
 <section class="wp-block-group alignfull au-section au-cta-section">
 	<!-- wp:group {"align":"wide","className":"au-cta au-reveal","layout":{"type":"default"}} -->
-	<div class="wp-block-group alignwide au-cta au-reveal"<?php echo '' !== $openmu_aurora_banner ? ' style="--au-cta-image:url(' . esc_url( $openmu_aurora_banner ) . ')"' : ''; ?>>
+	<div class="wp-block-group alignwide au-cta au-reveal"<?php echo '' !== $openmu_aurora_banner ? ' style="' . esc_attr( '--au-cta-image:' . openmu_aurora_css_url( $openmu_aurora_banner ) ) . '"' : ''; ?>>
 		<!-- wp:paragraph {"className":"au-eyebrow"} -->
 		<p class="au-eyebrow"><?php esc_html_e( 'Join us', 'openmu-aurora' ); ?></p>
 		<!-- /wp:paragraph -->
