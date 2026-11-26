@@ -1,7 +1,6 @@
 <?php
 /**
- * Theme setup: supports, styles and scripts, pattern categories, block styles and the
- * hand-over of the bundled client assets to the OpenMU WP Connect plugin.
+ * Theme setup: supports, styles and scripts, pattern categories and block styles.
  *
  * @package OpenMU_Aurora
  */
@@ -117,27 +116,6 @@ function openmu_aurora_body_class( array $classes ): array {
 	return $classes;
 }
 add_filter( 'body_class', 'openmu_aurora_body_class' );
-
-/**
- * Hands the bundled client assets (class renders, item data) to the OpenMU WP Connect
- * plugin. The folder has classes/ and data/ but no character-view/ textures, so the
- * plugin draws its neutral armory view (styled by assets/css/blocks.css) with the class pictures.
- *
- * @param array{path: string, url: string}|mixed $folder The plugin's own folder (kept when the theme has none).
- * @return array{path: string, url: string}
- */
-function openmu_aurora_client_assets( $folder ): array {
-	// The public release ships no game client files: without the folder the plugin keeps its own
-	// (uploads) folder, where a site owner can put the files from their own client.
-	if ( ! is_dir( get_theme_file_path( 'assets/client/' ) ) ) {
-		return is_array( $folder ) ? $folder : array();
-	}
-	return array(
-		'path' => get_theme_file_path( 'assets/client/' ),
-		'url'  => get_theme_file_uri( 'assets/client/' ),
-	);
-}
-add_filter( 'openmu_wp_connect_client_assets', 'openmu_aurora_client_assets' );
 
 /**
  * Registers the pattern categories of the theme's inserter section.

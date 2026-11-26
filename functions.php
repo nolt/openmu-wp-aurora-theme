@@ -4,7 +4,7 @@
  *
  * Loads the theme's include files, each of which owns one concern:
  * - helpers.php     small functions used everywhere (art paths and URLs, inline icons, page lookup);
- * - setup.php       theme supports, styles and scripts, patterns, block styles, client assets filter;
+ * - setup.php       theme supports, styles and scripts, patterns, block styles;
  * - stage.php       the painted, animated background ("stage") printed after <body>;
  * - nav.php         the dynamic header menu block (openmu-aurora/site-nav);
  * - news-fallback.php  painted fallback pictures for posts without a featured image;
