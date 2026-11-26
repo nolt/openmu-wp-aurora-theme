@@ -30,6 +30,12 @@
 	color-scheme: dark;
 }
 
+/* Embedded pages (videos, maps, Discord widgets) keep their own colour scheme: under the dark
+   one above, an embed that does not declare its own would get an opaque white background. */
+iframe {
+	color-scheme: normal;
+}
+
 html {
 	scroll-behavior: smooth;
 	/* The sticky header must not hide anchor targets. */
