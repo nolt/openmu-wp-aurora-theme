@@ -177,6 +177,23 @@ function openmu_aurora_page_url( string $slug ): string {
 }
 
 /**
+ * Whether the visitor is logged in as a player (session of the OpenMU WP Connect plugin).
+ *
+ * Players are not WordPress users. Used to turn "Create an account" buttons into "My account" for
+ * players who already have one; the plugin keeps pages out of page caches while its session
+ * cookie is present, and this helper asks for that again, so the label never reaches other
+ * visitors.
+ */
+function openmu_aurora_player_logged_in(): bool {
+	$player = function_exists( 'openmu_wp_connect_account_current' ) && null !== openmu_wp_connect_account_current();
+	// The page now differs per player: ask for no-cache here too, not only through the plugin's hook.
+	if ( $player && function_exists( 'openmu_wp_connect_account_send_no_cache' ) ) {
+		openmu_wp_connect_account_send_no_cache();
+	}
+	return $player;
+}
+
+/**
  * Returns the title of a page of the theme's fixed set, or the given default when the page is
  * missing or hidden from visitors.
  *

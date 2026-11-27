@@ -33,7 +33,7 @@
 		<!-- /wp:button -->
 
 		<!-- wp:button {"className":"is-style-ghost"} -->
-		<div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( openmu_aurora_page_url( 'account' ) ); ?>"><?php esc_html_e( 'Create an account', 'openmu-aurora' ); ?></a></div>
+		<div class="wp-block-button is-style-ghost"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( openmu_aurora_page_url( 'account' ) ); ?>"><?php echo esc_html( openmu_aurora_player_logged_in() ? __( 'My account', 'openmu-aurora' ) : __( 'Create an account', 'openmu-aurora' ) ); ?></a></div>
 		<!-- /wp:button --></div>
 		<!-- /wp:buttons -->
 

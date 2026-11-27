@@ -12,7 +12,7 @@
 
 /** The steps: icon, heading, text, link slug and link label. */
 $openmu_aurora_steps = array(
-	array( 'user', __( 'Create an account', 'openmu-aurora' ), __( 'Pick a login and a password. The same account works in the game and on this site.', 'openmu-aurora' ), 'account', __( 'Register', 'openmu-aurora' ) ),
+	array( 'user', __( 'Create an account', 'openmu-aurora' ), __( 'Pick a login and a password. The same account works in the game and on this site.', 'openmu-aurora' ), 'account', openmu_aurora_player_logged_in() ? __( 'My account', 'openmu-aurora' ) : __( 'Register', 'openmu-aurora' ) ),
 	array( 'download', __( 'Download the client', 'openmu-aurora' ), __( 'Get the game from the download page and connect to the server.', 'openmu-aurora' ), 'download', __( 'Download', 'openmu-aurora' ) ),
 	array( 'sword', __( 'Create a hero', 'openmu-aurora' ), __( 'Log in, choose a class and step onto the first map. Type /list in the chat to see the commands.', 'openmu-aurora' ), 'commands', __( 'Commands', 'openmu-aurora' ) ),
 	array( 'events', __( 'Join the events', 'openmu-aurora' ), __( 'Blood Castle, Devil Square and invasions run on a schedule. Gather a group and take part.', 'openmu-aurora' ), 'events', __( 'Schedule', 'openmu-aurora' ) ),

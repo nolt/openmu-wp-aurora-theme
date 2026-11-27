@@ -3,20 +3,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenMU Aurora 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/openmu-aurora\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/t\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-24T08:52:55+00:00\n"
+"POT-Creation-Date: 2026-11-27T08:03:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: openmu-aurora\n"
 
 #. Theme Name of the theme
 #: style.css
-#: inc/setup.php:131
+#: inc/setup.php:150
 msgid "OpenMU Aurora"
 msgstr ""
 
@@ -45,51 +45,51 @@ msgid "Menu"
 msgstr ""
 
 #: inc/nav.php:59
-#: inc/site-setup.php:46
+#: inc/site-setup.php:56
 #: patterns/footer.php:26
 msgid "Ranking"
 msgstr ""
 
 #: inc/nav.php:60
-#: inc/site-setup.php:47
+#: inc/site-setup.php:57
 #: patterns/footer.php:27
 msgid "Mini games"
 msgstr ""
 
 #: inc/nav.php:61
-#: inc/site-setup.php:48
+#: inc/site-setup.php:58
 #: patterns/footer.php:28
 msgid "Armory"
 msgstr ""
 
 #: inc/nav.php:62
-#: inc/site-setup.php:49
+#: inc/site-setup.php:59
 #: patterns/footer.php:29
 msgid "Events"
 msgstr ""
 
 #: inc/nav.php:63
-#: inc/site-setup.php:50
+#: inc/site-setup.php:60
 #: patterns/footer.php:30
 #: patterns/how-to-start.php:17
 msgid "Commands"
 msgstr ""
 
 #: inc/nav.php:67
-#: inc/site-setup.php:43
+#: inc/site-setup.php:53
 #: patterns/footer.php:20
 msgid "Home"
 msgstr ""
 
 #: inc/nav.php:68
-#: inc/site-setup.php:44
+#: inc/site-setup.php:54
 #: patterns/footer.php:21
 #: patterns/news-archive.php:13
 msgid "News"
 msgstr ""
 
 #: inc/nav.php:69
-#: inc/site-setup.php:45
+#: inc/site-setup.php:55
 #: patterns/footer.php:22
 #: patterns/how-to-start.php:16
 msgid "Download"
@@ -105,31 +105,25 @@ msgid "Server"
 msgstr ""
 
 #: inc/nav.php:77
-#: inc/site-setup.php:51
+#: inc/site-setup.php:61
 #: patterns/footer.php:23
 msgid "Account"
 msgstr ""
 
-#: inc/setup.php:135
+#: inc/setup.php:154
 msgid "OpenMU Aurora pages"
 msgstr ""
 
-#: inc/setup.php:150
+#: inc/setup.php:169
 msgid "Glass panel"
 msgstr ""
 
-#: inc/setup.php:157
+#: inc/setup.php:176
 msgid "Glass outline"
 msgstr ""
 
-#: inc/setup.php:164
+#: inc/setup.php:183
 msgid "Framed"
-msgstr ""
-
-#. translators: 1: page title, 2: date.
-#: inc/site-setup.php:198
-#, php-format
-msgid "%1$s (backup %2$s)"
 msgstr ""
 
 #: patterns/class-showcase.php
@@ -139,108 +133,108 @@ msgstr ""
 
 #: patterns/class-showcase.php
 msgctxt "Pattern description"
-msgid "Interactive showcase of the seven classes with painted portraits, role meters and signature skills. The selector works with mouse, touch, swipe and keyboard."
-msgstr ""
-
-#: patterns/class-showcase.php:20
-msgid "Frontline guardian"
+msgid "Interactive showcase of the seven classes with painted portraits, role meters and signature skills. Tabs work with mouse, touch, swipe and keyboard."
 msgstr ""
 
 #: patterns/class-showcase.php:21
+msgid "Frontline guardian"
+msgstr ""
+
+#: patterns/class-showcase.php:22
 msgid "Heavy armour, two-handed steel and the stamina to hold any line. The Dark Knight stands first in every fight and leads every charge."
 msgstr ""
 
-#: patterns/class-showcase.php:27
+#: patterns/class-showcase.php:29
 msgid "Arcane artillery"
 msgstr ""
 
-#: patterns/class-showcase.php:28
+#: patterns/class-showcase.php:30
 msgid "Fire, ice and storm on command. Area spells melt whole crowds, at the price of thin armour and careful positioning."
 msgstr ""
 
-#: patterns/class-showcase.php:34
+#: patterns/class-showcase.php:37
 msgid "Marksman and healer"
 msgstr ""
 
-#: patterns/class-showcase.php:35
+#: patterns/class-showcase.php:38
 msgid "Swift arrows from a distance and blessings for the whole group. A good elf keeps friends alive and enemies out of reach."
 msgstr ""
 
-#: patterns/class-showcase.php
+#: patterns/class-showcase.php:45
 msgid "Commander"
 msgstr ""
 
-#: patterns/class-showcase.php
+#: patterns/class-showcase.php:46
 msgid "Strength, command and a loyal Dark Raven at his side. Earth-splitting blows and bursts of fire, and a battle cry that sharpens the whole party."
 msgstr ""
 
-#: patterns/class-showcase.php
+#: patterns/class-showcase.php:53
 msgid "Spellblade"
 msgstr ""
 
-#: patterns/class-showcase.php
+#: patterns/class-showcase.php:54
 msgid "Sword and spell in a single hand. The Magic Gladiator cuts through the front line with blades of fire and answers a crowd with a storm."
 msgstr ""
 
-#: patterns/class-showcase.php
+#: patterns/class-showcase.php:61
 msgid "Curses and spirits"
 msgstr ""
 
-#: patterns/class-showcase.php
+#: patterns/class-showcase.php:62
 msgid "Lightning, curses and stolen life. The Summoner weakens and puts enemies to sleep while the book does the killing from a safe distance."
 msgstr ""
 
-#: patterns/class-showcase.php
+#: patterns/class-showcase.php:69
 msgid "Unarmed brawler"
 msgstr ""
 
-#: patterns/class-showcase.php
+#: patterns/class-showcase.php:70
 msgid "No weapon but gauntlets and fury. Fast combo strikes and a roar that shakes the ground make the Rage Fighter a master of close combat."
 msgstr ""
 
-#: patterns/class-showcase.php:41
+#: patterns/class-showcase.php:76
 msgid "Offense"
 msgstr ""
 
-#: patterns/class-showcase.php:42
+#: patterns/class-showcase.php:77
 msgid "Defense"
 msgstr ""
 
-#: patterns/class-showcase.php:43
+#: patterns/class-showcase.php:78
 msgid "Reach"
 msgstr ""
 
-#: patterns/class-showcase.php:44
+#: patterns/class-showcase.php:79
 msgid "Support"
 msgstr ""
 
-#: patterns/class-showcase.php:52
+#: patterns/class-showcase.php:87
 msgid "Choose your path"
 msgstr ""
 
-#: patterns/class-showcase.php:56
+#: patterns/class-showcase.php:91
 msgid "Seven heroes, one continent"
 msgstr ""
 
-#: patterns/class-showcase.php:60
+#: patterns/class-showcase.php:95
 msgid "Every class plays differently. Pick the one that fits you; you can always start another."
 msgstr ""
 
-#: patterns/class-showcase.php:81
+#: patterns/class-showcase.php:102
 msgid "Classes"
 msgstr ""
 
 #. translators: 1: rating 1-5.
-#: patterns/class-showcase.php:100
+#: patterns/class-showcase.php:139
 #, php-format
 msgid "%d out of 5"
 msgstr ""
 
-#: patterns/class-showcase.php:108
+#: patterns/class-showcase.php:147
 msgid "Signature skills"
 msgstr ""
 
-#: patterns/class-showcase.php:117
+#: patterns/class-showcase.php:156
 msgid "Start your journey"
 msgstr ""
 
@@ -264,6 +258,13 @@ msgstr ""
 
 #: patterns/community-cta.php:28
 msgid "Make an account, find a group and see how far the northern lights will carry you. New players are always welcome."
+msgstr ""
+
+#: patterns/community-cta.php:33
+#: patterns/hero.php:36
+#: patterns/how-to-start.php:15
+#: patterns/page-download.php:43
+msgid "My account"
 msgstr ""
 
 #: patterns/community-cta.php:33
@@ -897,182 +898,182 @@ msgctxt "block description"
 msgid "The fixed main menu of an OpenMU site: Home, News, Download, the Server submenu (Ranking, Mini games, Armory, Events, Commands) and Account, plus the Play now button. Labels follow the page titles."
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Midnight"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Night"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Dusk"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Frost"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Silver text"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Silver"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Muted"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Line"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Aurora teal"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Aurora violet"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Aurora rose"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Text on accent"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Item: ancient"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Color name"
 msgid "Item: option"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Gradient name"
 msgid "Aurora"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Gradient name"
 msgid "Aurora soft"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Gradient name"
 msgid "Night"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Font family name"
 msgid "Marcellus SC"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Font family name"
 msgid "Manrope"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Font family name"
 msgid "Monospace"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Font size name"
 msgid "Small"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Font size name"
 msgid "Base"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Font size name"
 msgid "Medium"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Font size name"
 msgid "Large"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Font size name"
 msgid "Extra large"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Font size name"
 msgid "Huge"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Space size name"
 msgid "XS"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Space size name"
 msgid "S"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Space size name"
 msgid "M"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Space size name"
 msgid "L"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Space size name"
 msgid "XL"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Space size name"
 msgid "XXL"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Shadow name"
 msgid "Glass"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Shadow name"
 msgid "Aurora glow"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Template part name"
 msgid "Header"
 msgstr ""
 
-#: theme.json
+#: heme.json
 msgctxt "Template part name"
 msgid "Footer"
 msgstr ""
